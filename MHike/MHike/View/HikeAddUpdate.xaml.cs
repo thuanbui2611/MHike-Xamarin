@@ -29,7 +29,6 @@ namespace MHike.View
             levelEntry.Text = hike.Level;
             descriptionEntry.Text = hike.Description;
             nameEntry.Focus();
-
         }
 
         async void Button_Clicked(object sender, EventArgs e)
@@ -57,7 +56,6 @@ namespace MHike.View
             _hike.Description = descriptionEntry.Text;
             _hike.Level = levelEntry.Text;
             _hike.Parking = parkingEntry.Text;
-            //_hike.CreatedAt = 
             await App.MyDatabase.UpdateHike(_hike);
             await Navigation.PopAsync();
         }

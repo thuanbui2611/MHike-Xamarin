@@ -51,7 +51,6 @@ namespace MHike.View
             _observation.Name = nameEntry.Text;
             _observation.Time = dateTime;
             _observation.Comment = commentEntry.Text;
-            //created_At?
             await App.MyDatabase.UpdateObservation(_observation);
             await Navigation.PopAsync();
         }
